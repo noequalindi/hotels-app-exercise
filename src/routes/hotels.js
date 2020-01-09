@@ -8,44 +8,40 @@ var url = require('url')
 
 router.use(paginate.middleware(10, 50));
 
-router.get('/', async (request, response, next) => {
+router.get('/', async (request, response) => {
     var url_parts = url.parse(request.url, true);
     var query = url_parts.query;
     var result = data;    
     
-    const pageCount = Math.ceil(result.length / 10);
     let page = parseInt(request.query.p);
-    if (!page) { page = 1;}
 
-    if (page > pageCount) {
-      page = pageCount
-    }
-    
+    if (!page) page = 1;
 
-    if (query.stars && query.name) {
-        result = result.filter(item => {
-            return item.stars === parseInt(query.stars) && item.name.indexOf(query.name) > -1;
-        });
-    }
-      
     if (query.name) {
         result = result.filter(item => {
-            return item.name.indexOf(query.name) > -1;
+            return item.name.search((new RegExp(query.name, 'i'))) > -1;
         }); 
     }
+    
+    if (query.stars && query.stars.length) {
+        let arr = JSON.parse(query.stars);
 
-    if (query.stars) {
         result = result.filter(item => {
-            return item.stars === parseInt(query.stars);
+            return arr.includes(item.stars);
         }); 
+    }  
+
+    const pageCount = Math.ceil(result.length / 10);
+    if (page > pageCount) {
+        page = pageCount
     }
-         
+    
     response.json({
         "page": page,
+        "pageCount": pageCount,
         "result": result.slice(page * 10 - 10, page * 10)
     })
     
-
 });
 
 
