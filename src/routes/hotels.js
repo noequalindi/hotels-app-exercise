@@ -5,9 +5,6 @@ const paginate = require('express-paginate');
 var data = require('../data/data.json')
 var url = require('url')
 
-
-router.use(paginate.middleware(10, 50));
-
 router.get('/', async (request, response) => {
     var url_parts = url.parse(request.url, true);
     var query = url_parts.query;
@@ -24,11 +21,13 @@ router.get('/', async (request, response) => {
     }
     
     if (query.stars && query.stars.length) {
-        let arr = JSON.parse(query.stars);
+        let stars = query.stars
+        .split(';')
+        .map(item => parseInt(item, 10));
 
         result = result.filter(item => {
-            return arr.includes(item.stars);
-        }); 
+        return stars.includes(item.stars);
+        });
     }  
 
     const pageCount = Math.ceil(result.length / 10);
