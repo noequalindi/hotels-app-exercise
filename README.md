@@ -1,3 +1,3 @@
 # exercise-backend
-# first run #npm install
-# then node src/index.js
+- first run #npm install
+- then run node src/index.js
