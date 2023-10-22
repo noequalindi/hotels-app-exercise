@@ -1,0 +1,10 @@
+html, body {
+  background-color: #f4f4f4;
+  width: 100%;
+}
+
+@media (min-width: 550px) {
+  .column, .columns {
+    margin-left: 2% !important;
+  }
+}

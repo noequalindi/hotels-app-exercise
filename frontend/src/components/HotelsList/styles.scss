@@ -1,0 +1,9 @@
+.HotelList {
+    margin-right: 20px;
+}
+
+@media (max-width: 550px) {
+    .HotelList {
+        margin-right: 0;
+    }
+}

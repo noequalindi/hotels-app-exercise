@@ -1,0 +1,90 @@
+@import '../../scss/common.scss';
+
+.Header {
+    background-color: $primary-color;
+    min-height: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: $white;
+}
+
+.Header-logo {
+    margin-left: 20px;
+}
+
+.Body {
+    margin-top: 20px
+}
+
+.NoResultsContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 390px;
+
+    .NoResultsLogo {
+        margin-top: 20px;
+    }
+
+    .NoResultsText {
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        color: $black;
+        display: block;
+    }
+}
+
+.Loader-Container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 400px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.Loader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    animation: fadeinout 2s linear infinite;
+}
+
+.Loader-text {
+    position: relative;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 6px;
+    margin-top: 10px;
+}
+
+@-webkit-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@media (max-width: 550px) {
+    .Body {
+        margin-top: 0;
+    }
+}

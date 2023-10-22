@@ -1,0 +1,29 @@
+@import '../../scss/common.scss';
+
+.PaginationList {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.PaginationItem {
+    margin-right: 10px;
+}
+
+.PaginationButton {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    &:hover {
+        background-color: $blue-100;
+        color: $white;
+    }
+
+    &.is-active {
+        background-color: $primary-color;
+        color: $white;
+    }
+}

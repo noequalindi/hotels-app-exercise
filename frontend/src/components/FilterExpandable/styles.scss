@@ -1,0 +1,64 @@
+@import '../../scss/common.scss';
+
+.ExpandableTitle {
+    color: $blue-100;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.ExpandableTitleWrap {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ExpandedArrowButton {
+    border: none;
+    width: 20px;
+    height: 28px;
+    padding: 0;
+}
+
+.ExpandableTitleIcon {
+    mask-size: cover;
+    background-color: $blue-100;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+
+    &.star {
+        mask: url('http://localhost:3001/assets/icons/filters/star.svg')
+    }
+
+    &.search {
+        mask: url('http://localhost:3001/assets/icons/filters/search.svg')
+    }
+}
+
+.StarIcon {
+    mask-size: cover;
+    background-color: $yellow-100;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    top: 0;
+    position: relative;
+    margin-left: 5px;
+    mask: url('http://localhost:3001/assets/icons/filters/star.svg')
+}
+
+.ExpandedIcon {
+    color: $blue-100;
+}
+
+.ExpandableItemRow {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ExpandableFilterInput {
+    width: 70%;
+}

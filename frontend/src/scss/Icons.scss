@@ -1,0 +1,74 @@
+@import '../scss/common.scss';
+
+.stars {
+    mask-size: cover;
+    background-color: $yellow-100;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+    padding:0;
+    mask: url('http://localhost:3001/assets/icons/filters/star.svg')
+}
+
+.Amenities {
+    mask-size: cover;
+    background-color: $gray-150;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    padding:0;
+
+    &.safety-box {
+        mask: url('http://localhost:3001/assets/icons/amenities/safety-box.svg');
+    }
+    &.separate-bredroom {
+        mask: url('http://localhost:3001/assets/icons/amenities/separate-bredroom.svg');
+    }
+    &.sheets {
+        mask: url('http://localhost:3001/assets/icons/amenities/sheets.svg');
+    }
+    &.restaurant {
+        mask: url('http://localhost:3001/assets/icons/amenities/restaurant.svg');
+    }
+    &.nightclub {
+        mask: url('http://localhost:3001/assets/icons/amenities/nightclub.svg');
+    }
+    &.newspaper {
+        mask: url('http://localhost:3001/assets/icons/amenities/newspaper.svg');
+    }
+    &.kitchen-facilities {
+        mask: url('http://localhost:3001/assets/icons/amenities/kitchen-facilities.svg');
+    }
+    &.garden {
+        mask: url('http://localhost:3001/assets/icons/amenities/garden.svg');
+    }
+    &.fitness-center {
+       mask: url('http://localhost:3001/assets/icons/amenities/fitness-center.svg');
+    }
+    &.deep-soaking-bathtub {
+        mask: url('http://localhost:3001/assets/icons/amenities/deep-soaking-bathtub.svg');
+    }
+    &.coffe-maker {
+        mask: url('http://localhost:3001/assets/icons/amenities/coffe-maker.svg');
+    }
+    &.children-club {
+        mask: url('http://localhost:3001/assets/icons/amenities/children-club.svg');
+    }
+    &.business-center {
+        mask: url('http://localhost:3001/assets/icons/amenities/business-center.svg');
+    }
+    &.beach {
+        mask: url('http://localhost:3001/assets/icons/amenities/beach.svg');
+    }
+    &.beach-pool-facilities {
+        mask: url('http://localhost:3001/assets/icons/amenities/beach-pool-facilities.svg');
+    }
+    &.bathtub {
+        mask: url('http://localhost:3001/assets/icons/amenities/bathtub.svg');
+    }
+    &.bathrobes {
+        mask: url('http://localhost:3001/assets/icons/amenities/bathrobes.svg');
+    }
+}
